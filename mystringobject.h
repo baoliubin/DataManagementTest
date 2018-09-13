@@ -38,6 +38,8 @@ public slots:
 private slots:
     /*轮播列表内数据*/
     void loopData();
+    /*校验传入的字符串与已经存储的字符串是否相等*/
+    bool checkStringSame(QString string);
 
 signals:
     void getStringChanged(QString getString);
