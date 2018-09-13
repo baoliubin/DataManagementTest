@@ -12,11 +12,11 @@ Window {
         onTextChanged: {
             myStringObject.getString = textText.text;
             console.log("myStringObject.getString",myStringObject.getString,"myStringObject.sendStringListToQml()",myStringObject.sendStringListToQml())
-            myStringObject.loopData();
         }
     }
     property int num: 0
     Timer {
+        id: mtimer
         running: true
         interval: 1000
         repeat: num < 5
@@ -24,6 +24,11 @@ Window {
             textText.text = num.toString();
 
             num++;
+            if(num == 5) {
+                mtimer.interval = 5000;
+                num = 0;
+                mtimer.start();
+            }
         }
     }
 

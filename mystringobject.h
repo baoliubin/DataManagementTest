@@ -30,21 +30,17 @@ public slots:
 
     /*解析字符串列表并将整个列表发送给qml*/
     QStringList sendStringListToQml();
-    /*轮播列表内数据
-     *请在线程内使用
-     */
-    void loopData();
     /*返回解析到的数据*/
     QString sendStringToQml(QString string);
 
     /*线程工作*/
     void showNextString();
+private slots:
+    /*轮播列表内数据*/
+    void loopData();
 
 signals:
     void getStringChanged(QString getString);
-
-    /*解析信号*/
-    void analysis();
 
 private:
 

@@ -32,7 +32,8 @@ OTHER_FILES += \
 README.md
 
 DISTFILES += \
-    README.md
+    README.md \
+    CHANG_LOG
 
 HEADERS += \
     mystringobject.h
