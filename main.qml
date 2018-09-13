@@ -24,6 +24,7 @@ Window {
     Rectangle {
         id: textRectangle1
         x: 100
+        y: 100
         width: 100
         height: 20
 
@@ -33,6 +34,7 @@ Window {
         TextInput {
             id: textRectangle1TextInput
             anchors.fill: parent
+            anchors.verticalCenter: textRectangle1.verticalCenter
             text: "Hello"
             color: "green"
             readOnly: false
@@ -41,13 +43,21 @@ Window {
             font.capitalization: Font.AllLowercase
         }
     }
+    /*发送数据鼠标点击按钮*/
     Rectangle {
         anchors.left: textRectangle1.right
         anchors.leftMargin: 2
-        width: 20
-        height: 20
+        anchors.verticalCenter: textRectangle1.verticalCenter
+        width: 40
+        height: 40
         color: myMouseArea1.pressed ? "gray" : "black"
         radius: 40
+        Text {
+            text: qsTr("send")
+            anchors.centerIn: parent
+            color: "white"
+            font.pointSize: 10
+        }
         MouseArea {
             id: myMouseArea1
             anchors.fill: parent
