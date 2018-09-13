@@ -11,7 +11,6 @@ Window {
         text: ""
         onTextChanged: {
             myStringObject.getString = textText.text;
-//            myStringObject.getString = "bbb";
             console.log("myStringObject.getString",myStringObject.getString,"myStringObject.sendStringListToQml()",myStringObject.sendStringListToQml())
             myStringObject.loopData();
         }

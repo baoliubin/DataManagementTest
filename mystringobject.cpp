@@ -5,9 +5,7 @@
 
 MyStringObject::MyStringObject()
 {
-//    connect(&m_timer,SIGNAL(timeout()) ,this, SLOT(showNextString()));
     connect(&m_timer,&QTimer::timeout,this,&MyStringObject::showNextString);
-//    connect(&m_timer,&QTimer::timeout,([]{ qWarning() << "Hi ,debug"; }));
     m_timer.start(1000);
 
 }
